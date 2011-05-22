@@ -1,24 +1,44 @@
 <html>
 <head>
-  <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+	<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
 </head>
-  <body>
-    {% for greeting in greetings %}
-      {% if greeting.author %}
-        <b>{{ greeting.author.nickname }}</b> wrote:
-      {% else %}
-        An anonymous person wrote:
-      {% endif %}
-        <blockquote>{{ greeting.content|escape }}</blockquote>
-    {% endfor %}
+<body>
+	<div class="blockdummy"></div>
 
-    <form action="/sign" method="post">
-      <div><textarea name="content" row="3" cols="60"></textarea></div>
-      <div><input type="submit" value="Sign Guestbook"></div>
-    </form>
+	<div class="blockTitle">
+		Hello World!
+	</div>
 
-    <a href="{{ url }}">{{ url_linktext}}</a>
-  </body>
+	<div class="blockLogin">
+		<a href="{{ url }}">{{ url_linktext}}</a>
+	</div>
+
+	<div class="blockInput">
+		<form action="/sign" method="post">
+			<div><textarea name="content" row="3" cols="60"></textarea></div>
+			<div><input type="submit" value="Tweet"></div>
+		</form>
+	</div>
+
+	<div class="blockTimeLine">
+		{% for greeting in greetings %}
+		{% if greeting.author %}
+		{{ greeting.author.nickname }} :
+		{% else %}
+		An anonymous person wrote:
+		{% endif %}
+		<blockquote>{{ greeting.content|escape }}</blockquote>
+		{% endfor %}
+	</div>
+	<div class="blockCopyright">
+		<p align=center>Developer : <a href="http://about.me/yukimorishita">about.me/yukimorishita</a></p>
+	</div>
+
+	<div class="blockLogo">
+		<p align=center><img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine" /></p>
+	</div>
+
+</body>
 </html>
 
 

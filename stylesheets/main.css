@@ -1,4 +1,47 @@
-body {
-    font-family: Verdana, Helvetica, sans-selif;
-    background-color: #DDDDDD;
+<style type="text/css">
+
+div.blockdummy {
+
 }
+body {
+	font-family: Verdana, Helvetica, sans-selif;
+	background-color: #DDDDDD;
+}
+
+blockquote {
+	/*padding: 4px;*/
+	background-color: #DDDDDD;
+}
+div.blockTitle {
+	background-color: #ffa500;
+	width: 200px;
+	height: 36px;
+	float: left;
+
+	/*font-size: larger;*/
+	font-weight: bold;
+}
+
+div.blockLogin {
+	background-color: #6b8e23;
+	margin-left: 200px;
+	height: 36px;
+}
+
+div.blockInput {
+	background-color: #483d8b;
+}
+
+div.blockTimeLine {
+	background-color: #add8e6;
+}
+
+div.blockCopyright {
+	background-color: #4682b4;
+}
+div.blockLogo {
+	/*background-color: #4682b4;*/
+
+}
+</style>
+
