@@ -8,6 +8,8 @@ from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext import db
 
+# add 2020-01-09
+
 class Greeting(db.Model):
     author = db.UserProperty()
     content = db.StringProperty(multiline=True)
